@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Yayra",
+  lastName: "Lamadokou",
+  name: `Yayra Lamadokou`,
+  role: "Économie appliquée Data & Machine Learning",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "ylamadokou@gmail.com",
+  location: "Africa/Lome", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Français", "Anglais"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Newsletter de {person.firstName}</>,
+  description: <>Actualités sur mes projets data, analyses et études.</>,
 };
 
 const social: Social = [
@@ -25,25 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Juniorleriche27",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/yayra-junior-lamadokou-387973241",
     essential: true,
   },
   {
@@ -52,20 +40,26 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "Facebook",
+    icon: "facebook",
+    link: "https://web.facebook.com/pelageyayra.lamadokou.9",
+    essential: false,
+  },
 ];
 
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Accueil",
+  title: `Portfolio de ${person.name}`,
+  description: `Site personnel présentant mon parcours et mes projets en ${person.role}`,
+  headline: <>Économie appliquée, data et impact réel</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">{person.name}</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -76,16 +70,22 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Je suis {person.name}, spécialisé(e) en{" "}
+      <Text as="span" size="xl" weight="strong">
+        économie appliquée et data
+      </Text>
+      . J’analyse des données réelles pour aider à la décision (politiques publiques,
+      entreprises, projets sociaux) et je construis des outils reproductibles (notebooks,
+      tableaux de bord, rapports).
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: `À propos – ${person.name}`,
+  description: `Découvrir ${person.name}, ${person.role} basé(e) à ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,60 +94,60 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Profil",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        {person.name} est spécialisé(e) en économie appliquée et data. Son intérêt principal :
+        transformer des données brutes (enquêtes, données administratives, séries temporelles,
+        données ouvertes) en analyses claires et actionnables pour les décideurs.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Expériences",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Projet data – Tableau de bord emploi",
+        timeframe: "2024 - Aujourd’hui",
+        role: "Data analyst / data engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Construction d’un tableau de bord interactif sur l’emploi (indicateurs, filtres,
+            visualisations) à partir de données publiques.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Automatisation de la collecte, du nettoyage et de l’actualisation des données dans un
+            pipeline reproductible (scripts + notebooks).
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Capture de projet data",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Formation & projets académiques",
+        timeframe: "Avant 2024",
+        role: "Étudiant(e) / junior",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Réalisation de plusieurs études quantitatives (économie appliquée, statistiques,
+            économétrie) avec R / Python.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Travail sur des mini-projets de groupe : analyse de données, rédaction de rapports,
+            présentations orales.
           </>,
         ],
         images: [],
@@ -156,31 +156,39 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Études",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Université (économie / data)",
+        description: (
+          <>Parcours en économie appliquée, statistiques et analyse de données.</>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Formations en ligne",
+        description: (
+          <>Cours et certifications en data (Python, notebooks, visualisation, machine learning).</>
+        ),
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Compétences techniques",
     skills: [
       {
-        title: "Figma",
+        title: "Python / R",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Analyse de données, notebooks reproductibles, visualisations et reporting.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "R",
+            icon: "r",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -200,22 +208,14 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Outils data & web",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Création de dashboards simples et sites pour présenter les résultats et projets.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Excel",
+            icon: "excel",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -234,27 +234,27 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Articles",
+  title: "Analyses et notes de blog",
+  description: `Articles courts sur mes projets, méthodes et réflexions autour de la data`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Projets",
+  title: `Projets – ${person.name}`,
+  description: `Projets data et études menés par ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Galerie",
+  title: `Galerie – ${person.name}`,
+  description: `Sélection de visuels et captures liés à mes projets`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
