@@ -142,18 +142,19 @@ export default function About() {
                 </Row>
               </Column>
             )}
-            <Button
-              href="/cv.pdf"
-              variant="primary"
-              size="m"
-              weight="default"
-              prefixIcon="document"
-              fillWidth
-              target="_blank"
-              marginTop="m"
-            >
-              Télécharger mon CV
-            </Button>
+            <Row fillWidth marginTop="m">
+              <Button
+                href="/cv.pdf"
+                variant="primary"
+                size="m"
+                weight="default"
+                prefixIcon="document"
+                fillWidth
+                target="_blank"
+              >
+                Télécharger mon CV
+              </Button>
+            </Row>
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>

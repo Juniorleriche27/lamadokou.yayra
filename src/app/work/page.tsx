@@ -41,17 +41,18 @@ export default function Work() {
           >
             {work.description}
           </Text>
-          <Button
-            href="/cv.pdf"
-            variant="secondary"
-            size="m"
-            weight="default"
-            prefixIcon="document"
-            target="_blank"
-            marginTop="m"
-          >
-            Télécharger mon CV
-          </Button>
+          <Row fillWidth marginTop="m" horizontal="center">
+            <Button
+              href="/cv.pdf"
+              variant="secondary"
+              size="m"
+              weight="default"
+              prefixIcon="document"
+              target="_blank"
+            >
+              Télécharger mon CV
+            </Button>
+          </Row>
         </Column>
       </RevealFx>
       <Projects />
