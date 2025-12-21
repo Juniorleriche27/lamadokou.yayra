@@ -54,7 +54,7 @@ const home: Home = {
   label: "Accueil",
   title: `Portfolio de ${person.name}`,
   description: `Site personnel présentant mon parcours et mes projets en ${person.role}`,
-  headline: <>Économie appliquée, data et impact réel</>,
+  headline: <>Économie • Data • Machine Learning</>,
   featured: {
     display: false,
     title: (
@@ -70,13 +70,28 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis {person.name}, spécialisé(e) en{" "}
-      <Text as="span" size="xl" weight="strong">
-        économie appliquée et data
-      </Text>
-      . J’analyse des données réelles pour aider à la décision (politiques publiques,
-      entreprises, projets sociaux) et je construis des outils reproductibles (notebooks,
-      tableaux de bord, rapports).
+      Diplômé en économie, j’ai construit une base solide en microéconomie, macroéconomie,
+      finance publique, commerce international, ainsi qu’en statistique et économétrie. Cette
+      formation m’a appris à analyser un problème, à structurer un raisonnement, et à relier les
+      phénomènes économiques à leurs mécanismes : croissance, fluctuations, échanges entre pays,
+      et impacts sur la société, en particulier en Afrique.
+      <br />
+      <br />
+      Les enseignements de statistique avancée et d’économétrie avancée m’ont donné le goût de la
+      modélisation : comprendre un phénomène, le formaliser, tester des hypothèses, puis interpréter
+      les résultats avec rigueur. C’est là que j’ai compris une chose simple : les décisions futures se
+      prennent mieux quand elles reposent sur des données bien exploitées.
+      <br />
+      <br />
+      J’ai donc choisi d’approfondir l’aspect technique. J’ai commencé par Python, puis j’ai élargi
+      vers la data analysis et la data engineering, avant de me concentrer aujourd’hui sur
+      l’apprentissage automatique. Je travaille aussi avec R et Stata pour l’analyse statistique.
+      <br />
+      <br />
+      Mon objectif est d’utiliser les données et l’apprentissage automatique pour contribuer à réduire
+      le chômage des jeunes en Afrique. Dans cette logique, j’ai lancé KORYXA, une plateforme pensée
+      pour s’attaquer à cette problématique, avec l’ambition de structurer l’accès aux opportunités
+      et de mieux connecter compétences, formation et emploi.
     </>
   ),
 };
@@ -102,9 +117,14 @@ const about: About = {
     title: "Profil",
     description: (
       <>
-        {person.name} est spécialisé(e) en économie appliquée et data. Son intérêt principal :
-        transformer des données brutes (enquêtes, données administratives, séries temporelles,
-        données ouvertes) en analyses claires et actionnables pour les décideurs.
+        Formé(e) en économie avec une spécialisation en statistique et économétrie, je m’appuie sur
+        des outils quantitatifs pour analyser et expliquer les mécanismes qui relient les phénomènes
+        économiques aux réalités sociales.
+        <br />
+        <br />
+        Je développe des compétences en data science et apprentissage automatique pour mettre les
+        données au service de la réduction du chômage des jeunes en Afrique. J’ai lancé KORYXA,
+        une plateforme pensée pour connecter compétences, formation et emploi.
       </>
     ),
   },
