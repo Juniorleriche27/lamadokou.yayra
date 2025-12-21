@@ -17,3 +17,15 @@
         align-self: center;
     }
 }
+
+.panel {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.tocCard {
+    max-width: 320px;
+}

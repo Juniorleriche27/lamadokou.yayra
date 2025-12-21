@@ -50,8 +50,9 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
   ];
+  const showTableOfContent = about.tableOfContent.display;
   return (
-    <Column maxWidth="m">
+    <Column maxWidth="xl" gap="32" paddingBottom="xl">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -65,30 +66,20 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          s={{ hide: true }}
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
+      {showTableOfContent && (
+        <Row fillWidth horizontal="center">
+          <TableOfContents structure={structure} about={about} floating={false} />
+        </Row>
       )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+      <Row fillWidth gap="24" s={{ direction: "column"}} horizontal="center">
         {about.avatar.display && (
           <Column
-            className={styles.avatar}
-            top="64"
+            className={`${styles.avatar} ${styles.panel}`}
             fitHeight
-            position="sticky"
             s={{ position: "relative", style: { top: "auto" } }}
             xs={{ style: { top: "auto" } }}
             minWidth={200}
-            paddingX="l"
-            paddingBottom="xl"
+            padding="xl"
             gap="m"
             flex={3}
             horizontal="center"
@@ -157,13 +148,13 @@ export default function About() {
             </Row>
           </Column>
         )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+        <Column className={`${styles.blockAlign} ${styles.panel}`} flex={9} maxWidth={64} padding="xl" gap="l">
           <Column
             id={about.intro.title}
             fillWidth
             minHeight="160"
-            vertical="center"
-            marginBottom="32"
+            gap="m"
+            marginBottom="m"
           >
             {about.calendar.display && (
               <Row

@@ -16,9 +16,10 @@ interface TableOfContentsProps {
       subItems: boolean;
     };
   };
+  floating?: boolean;
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
+const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about, floating = true }) => {
   const scrollTo = (id: string, offset: number) => {
     const element = document.getElementById(id);
     if (element) {
@@ -34,19 +35,30 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
 
   if (!about.tableOfContent.display) return null;
 
+  const wrapperProps = floating
+    ? {
+        left: "0" as const,
+        position: "fixed" as const,
+        paddingLeft: "24" as const,
+        gap: "32" as const,
+        m: { hide: true },
+        style: {
+          top: "50%",
+          transform: "translateY(-50%)",
+          whiteSpace: "nowrap",
+        },
+      }
+    : {
+        gap: "16" as const,
+        padding: "16" as const,
+        border: "neutral-alpha-weak" as const,
+        radius: "l" as const,
+        background: "surface" as const,
+        className: `${styles.tocCard} ${styles.panel}`,
+      };
+
   return (
-    <Column
-      left="0"
-      style={{
-        top: "50%",
-        transform: "translateY(-50%)",
-        whiteSpace: "nowrap",
-      }}
-      position="fixed"
-      paddingLeft="24"
-      gap="32"
-      m={{ hide: true }}
-    >
+    <Column {...wrapperProps}>
       {structure
         .filter((section) => section.display)
         .map((section, sectionIndex) => (
@@ -56,7 +68,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
               className={styles.hover}
               gap="8"
               vertical="center"
-              onClick={() => scrollTo(section.title, 80)}
+              onClick={() => scrollTo(section.title, floating ? 80 : 48)}
             >
               <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
               <Text>{section.title}</Text>
