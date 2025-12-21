@@ -19,6 +19,7 @@ const baseURL: string = "https://lamadokouyayra.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
+  "/cv": true,
   "/work": false,
   "/blog": false,
   "/gallery": false,

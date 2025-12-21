@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, BasePageConfig, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -114,60 +114,68 @@ const about: About = {
   },
   intro: {
     display: true,
-    title: "Profil",
+    title: "Compétences",
     description: (
       <>
-        Formé(e) en économie avec une spécialisation en statistique et économétrie, je m’appuie sur
-        des outils quantitatifs pour analyser et expliquer les mécanismes qui relient les phénomènes
-        économiques aux réalités sociales.
+        Formé(e) en économie avec une spécialisation en statistique et économétrie, je mobilise la
+        microéconomie, la macroéconomie et l’économétrie pour relier les phénomènes observés à leurs
+        mécanismes et mesurer leurs impacts concrets.
         <br />
         <br />
-        Je développe des compétences en data science et apprentissage automatique pour mettre les
-        données au service de la réduction du chômage des jeunes en Afrique. J’ai lancé KORYXA,
-        une plateforme pensée pour connecter compétences, formation et emploi.
+        Je développe des compétences data / ML pour mettre les données au service de la réduction du
+        chômage des jeunes en Afrique. J’ai lancé KORYXA pour connecter compétences, formation et
+        emploi.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Expériences",
+    title: "Projets",
     experiences: [
       {
-        company: "Projet data – Tableau de bord emploi",
+        company: "Tableau de bord emploi (ML)",
         timeframe: "2024 - Aujourd’hui",
         role: "Data analyst / data engineer",
         achievements: [
           <>
-            Construction d’un tableau de bord interactif sur l’emploi (indicateurs, filtres,
-            visualisations) à partir de données publiques.
+            Pipeline complet (collecte, nettoyage, features) pour alimenter des modèles de
+            prévision d’indicateurs d’emploi et produire des tableaux de bord interactifs.
           </>,
           <>
-            Automatisation de la collecte, du nettoyage et de l’actualisation des données dans un
-            pipeline reproductible (scripts + notebooks).
+            Tests d’algorithmes (régression, forêts, XGBoost) avec validation croisée et suivi des
+            métriques (RMSE, MAE) dans des notebooks versionnés.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Capture de projet data",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Formation & projets académiques",
-        timeframe: "Avant 2024",
-        role: "Étudiant(e) / junior",
+        company: "Assistant LLM pour la veille",
+        timeframe: "2024",
+        role: "Concepteur prompts / intégration LLM",
         achievements: [
           <>
-            Réalisation de plusieurs études quantitatives (économie appliquée, statistiques,
-            économétrie) avec R / Python.
+            Création d’un assistant de synthèse pour résumer articles et rapports, avec consignes
+            de style et extraction de points clés.
           </>,
           <>
-            Travail sur des mini-projets de groupe : analyse de données, rédaction de rapports,
-            présentations orales.
+            Intégration des sorties dans des notes structurées (objectifs, insights, actions) pour
+            alimenter les briefs projet.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Analyses statistiques académiques",
+        timeframe: "Avant 2024",
+        role: "R / Stata",
+        achievements: [
+          <>
+            Études quantitatives (micro/macro, développement) : modèles économétriques, tests
+            d’hypothèses, interprétation critique.
+          </>,
+          <>
+            Rédaction de rapports et présentations, en synthétisant jeux de données, méthodes et
+            limites des résultats.
           </>,
         ],
         images: [],
@@ -176,7 +184,7 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Études",
+    title: "Parcours & certifications",
     institutions: [
       {
         name: "Université (économie / data)",
@@ -194,62 +202,77 @@ const about: About = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Compétences techniques",
+    title: "Économie & outils",
     skills: [
       {
-        title: "Python / R",
+        title: "Économie",
         description: (
-          <>Analyse de données, notebooks reproductibles, visualisations et reporting.</>
+          <>Micro, macro, économie internationale, développement ; modélisation, statistique et économétrie.</>
         ),
         tags: [
-          {
-            name: "Python",
-            icon: "python",
-          },
-          {
-            name: "R",
-            icon: "r",
-          },
+          { name: "Microéconomie" },
+          { name: "Macroéconomie" },
+          { name: "Économétrie" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Outils data & web",
+        title: "Analyse statistique",
         description: (
-          <>Création de dashboards simples et sites pour présenter les résultats et projets.</>
+          <>Régressions, tests, séries temporelles avec Stata et R ; diagnostics et interprétation rigoureuse.</>
         ),
         tags: [
-          {
-            name: "Excel",
-            icon: "excel",
-          },
+          { name: "Stata" },
+          { name: "R" },
+          { name: "Tests d’hypothèse" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Python data",
+        description: (
+          <>Nettoyage, préparation et visualisation avec pandas, numpy, notebooks documentés et versions contrôlées.</>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+          { name: "Pandas" },
+          { name: "NumPy" },
         ],
+        images: [],
+      },
+      {
+        title: "Machine Learning",
+        description: (
+          <>Préparation des données, ingénierie de features, entraînement, validation croisée et suivi des métriques.</>
+        ),
+        tags: [
+          { name: "Scikit-learn" },
+          { name: "Validation croisée" },
+          { name: "Métriques" },
+        ],
+        images: [],
+      },
+      {
+        title: "Rédaction de projet",
+        description: (
+          <>Structuration de problématiques, objectifs, méthodologie, budget et plan d’exécution pour dossiers ML / data.</>
+        ),
+        tags: [
+          { name: "Cadrage" },
+          { name: "Budget" },
+          { name: "Planification" },
+        ],
+        images: [],
       },
     ],
   },
+};
+
+const cv: BasePageConfig = {
+  path: "/cv",
+  label: "CV",
+  title: `CV – ${person.name}`,
+  description: `CV détaillé et compétences de ${person.name}`,
 };
 
 const blog: Blog = {
@@ -321,4 +344,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, cv };
