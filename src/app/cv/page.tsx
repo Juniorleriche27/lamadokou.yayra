@@ -26,9 +26,9 @@ export default function CvPage() {
   const essentialSocial = social.filter((item) => item.essential);
 
   return (
-    <Column maxWidth="90" gap="l" padding="m" horizontal="center">
+    <Column maxWidth={1100} gap="l" padding="m" horizontal="center">
       <Schema
-        as="person"
+        as="webPage"
         baseURL={baseURL}
         title={cv.title}
         description={cv.description}
@@ -42,7 +42,7 @@ export default function CvPage() {
       />
 
       <Column
-        background="surface-strong"
+        background="surface"
         border="neutral-medium"
         radius="l"
         shadow="l"
