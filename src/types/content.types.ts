@@ -238,3 +238,100 @@ export interface Gallery extends BasePageConfig {
     orientation: string;
   }>;
 }
+
+/**
+ * CV/Resume configuration.
+ * @description Professional CV structure for Campus France and professional use.
+ */
+export interface CV extends BasePageConfig {
+  /** Personal profile summary */
+  profile: {
+    /** Professional summary text */
+    summary: string[];
+  };
+  /** Work experience and projects */
+  experience: {
+    /** List of professional experiences */
+    work: Array<{
+      /** Company or organization name */
+      company: string;
+      /** Job title or role */
+      role: string;
+      /** Time period (e.g., "2024 - Aujourd'hui") */
+      timeframe: string;
+      /** Location (optional) */
+      location?: string;
+      /** List of achievements and responsibilities */
+      achievements: string[];
+      /** Technologies/tools used */
+      technologies?: string[];
+    }>;
+    /** List of projects */
+    projects: Array<{
+      /** Project name */
+      name: string;
+      /** Project type/category */
+      type: string;
+      /** Project description */
+      description: string;
+      /** Technologies/tools used */
+      technologies: string[];
+      /** Project link (optional) */
+      link?: string;
+    }>;
+  };
+  /** Education section */
+  education: Array<{
+    /** Degree or qualification name */
+    degree: string;
+    /** Institution name */
+    institution: string;
+    /** Time period */
+    timeframe: string;
+    /** Location (optional) */
+    location?: string;
+    /** Description or notable achievements */
+    description?: string;
+    /** Grade or honors (optional) */
+    grade?: string;
+  }>;
+  /** Skills section */
+  skills: {
+    /** Technical skills grouped by category */
+    technical: Array<{
+      /** Category name */
+      category: string;
+      /** List of skills in this category */
+      items: string[];
+    }>;
+    /** Soft skills */
+    soft?: string[];
+  };
+  /** Certifications */
+  certifications: Array<{
+    /** Certification name */
+    name: string;
+    /** Issuing organization */
+    issuer?: string;
+    /** Date obtained */
+    date?: string;
+    /** Link to certificate (optional) */
+    link?: string;
+  }>;
+  /** Languages */
+  languages: Array<{
+    /** Language name */
+    name: string;
+    /** Proficiency level */
+    level: string;
+  }>;
+  /** Additional activities or interests */
+  activities?: Array<{
+    /** Activity name */
+    name: string;
+    /** Description */
+    description?: string;
+    /** Time period (optional) */
+    timeframe?: string;
+  }>;
+}

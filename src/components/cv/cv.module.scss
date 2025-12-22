@@ -1,0 +1,91 @@
+// Styles pour l'impression et PDF
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  :global(body) {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  // Masquer les éléments non nécessaires à l'impression
+  :global(header),
+  :global(footer),
+  :global(nav),
+  :global(button),
+  :global(.no-print) {
+    display: none !important;
+  }
+
+  // Optimiser les couleurs pour l'impression
+  :global(*) {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  // Éviter les sauts de page dans les sections importantes
+  :global(.cv-section) {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  // Permettre les sauts de page entre les grandes sections
+  :global(.cv-main-section) {
+    page-break-after: auto;
+  }
+
+  // Éviter les orphelins et veuves
+  :global(p),
+  :global(li) {
+    orphans: 3;
+    widows: 3;
+  }
+
+  // Optimiser les liens pour l'impression
+  :global(a) {
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  :global(a[href^="http"]:after) {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  // Masquer les liens de contact qui sont des boutons
+  :global(a[href^="mailto"]:after),
+  :global(a[href^="tel"]:after) {
+    content: "";
+  }
+}
+
+// Styles pour l'affichage écran
+.cv-container {
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background-color: var(--page-background);
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.cv-left-column {
+  @media (max-width: 768px) {
+    border-right: none !important;
+    border-bottom: 1px solid var(--neutral-alpha-medium);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cv-right-column {
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+}

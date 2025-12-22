@@ -1,0 +1,9 @@
+export { CVSection } from "./CVSection";
+export { CVProfile } from "./CVProfile";
+export { CVExperience } from "./CVExperience";
+export { CVEducation } from "./CVEducation";
+export { CVSkills } from "./CVSkills";
+export { CVCertifications } from "./CVCertifications";
+export { CVLanguages } from "./CVLanguages";
+export { CVActivities } from "./CVActivities";
+export { CVContact } from "./CVContact";

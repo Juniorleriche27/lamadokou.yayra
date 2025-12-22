@@ -1,27 +1,24 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, CV, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Yayra",
   lastName: "Lamadokou",
-  name: `Yayra Lamadokou`,
-  role: "Économie appliquée Data & Machine Learning",
-  avatar: "/images/avatar.jpg",
+  name: "Yayra Lamadokou",
+  role: "Diplômé en économie • Data • Machine Learning",
+  avatar: "/images/ma_photo.jpeg",
   email: "ylamadokou@gmail.com",
-  location: "Africa/Lome", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Français", "Anglais"], // optional: Leave the array empty if you don't want to display languages
+  location: "Africa/Lome", // IANA time zone identifier
+  languages: ["Français", "Anglais"],
 };
 
 const newsletter: Newsletter = {
   display: false,
   title: <>Newsletter de {person.firstName}</>,
-  description: <>Actualités sur mes projets data, analyses et études.</>,
+  description: <>Actualités sur mes projets, analyses et études.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
@@ -40,12 +37,13 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
-  {
-    name: "Facebook",
-    icon: "facebook",
-    link: "https://web.facebook.com/pelageyayra.lamadokou.9",
-    essential: false,
-  },
+  // Optionnel : garde Facebook seulement si tu veux vraiment l’afficher
+  // {
+  //   name: "Facebook",
+  //   icon: "facebook",
+  //   link: "https://web.facebook.com/pelageyayra.lamadokou.9",
+  //   essential: false,
+  // },
 ];
 
 const home: Home = {
@@ -53,7 +51,7 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Accueil",
   title: `Portfolio de ${person.name}`,
-  description: `Site personnel présentant mon parcours et mes projets en ${person.role}`,
+  description: `Site personnel présentant mon parcours et mes projets (économie, data, machine learning).`,
   headline: <>Économie • Data • Machine Learning</>,
   featured: {
     display: false,
@@ -62,7 +60,7 @@ const home: Home = {
         <strong className="ml-4">{person.name}</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Projet mis en avant
         </Text>
       </Row>
     ),
@@ -70,28 +68,24 @@ const home: Home = {
   },
   subline: (
     <>
-      Diplômé en économie, j’ai construit une base solide en microéconomie, macroéconomie,
-      finance publique, commerce international, ainsi qu’en statistique et économétrie. Cette
-      formation m’a appris à analyser un problème, à structurer un raisonnement, et à relier les
-      phénomènes économiques à leurs mécanismes : croissance, fluctuations, échanges entre pays,
-      et impacts sur la société, en particulier en Afrique.
+      Diplômé en économie, j’ai construit une base solide en microéconomie, macroéconomie, finance publique,
+      commerce international, ainsi qu’en statistique et économétrie. Cette formation m’a appris à analyser un
+      problème, à structurer un raisonnement, et à relier les phénomènes économiques à leurs mécanismes :
+      croissance, fluctuations, échanges entre pays, et impacts sur la société, en particulier en Afrique.
       <br />
       <br />
-      Les enseignements de statistique avancée et d’économétrie avancée m’ont donné le goût de la
-      modélisation : comprendre un phénomène, le formaliser, tester des hypothèses, puis interpréter
-      les résultats avec rigueur. C’est là que j’ai compris une chose simple : les décisions futures se
-      prennent mieux quand elles reposent sur des données bien exploitées.
+      La statistique avancée et l’économétrie avancée m’ont donné une première approche de la modélisation :
+      comprendre un phénomène, le formaliser, tester des hypothèses, puis interpréter les résultats avec rigueur.
       <br />
       <br />
-      J’ai donc choisi d’approfondir l’aspect technique. J’ai commencé par Python, puis j’ai élargi
-      vers la data analysis et la data engineering, avant de me concentrer aujourd’hui sur
-      l’apprentissage automatique. Je travaille aussi avec R et Stata pour l’analyse statistique.
+      J’ai donc choisi d’approfondir l’aspect technique. J’ai commencé par Python, puis j’ai élargi vers l’analyse
+      de données et l’ingénierie des données, avant de me concentrer aujourd’hui sur l’apprentissage automatique.
+      Je travaille aussi avec R et Stata pour l’analyse statistique.
       <br />
       <br />
-      Mon objectif est d’utiliser les données et l’apprentissage automatique pour contribuer à réduire
-      le chômage des jeunes en Afrique. Dans cette logique, j’ai lancé KORYXA, une plateforme pensée
-      pour s’attaquer à cette problématique, avec l’ambition de structurer l’accès aux opportunités
-      et de mieux connecter compétences, formation et emploi.
+      Mon objectif est d’utiliser les données et l’apprentissage automatique pour contribuer à réduire le chômage
+      des jeunes en Afrique. Dans cette logique, j’ai lancé KORYXA, une plateforme pensée pour connecter
+      compétences, formation et emploi.
     </>
   ),
 };
@@ -100,7 +94,7 @@ const about: About = {
   path: "/about",
   label: "À propos",
   title: `À propos – ${person.name}`,
-  description: `Découvrir ${person.name}, ${person.role} basé(e) à ${person.location}`,
+  description: `Découvrir le parcours et les compétences de ${person.name}.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -114,40 +108,33 @@ const about: About = {
   },
   intro: {
     display: true,
-    title: "Profil",
+    title: "Compétences",
     description: (
       <>
-        Formé(e) en économie avec une spécialisation en statistique et économétrie, je m’appuie sur
-        des outils quantitatifs pour analyser et expliquer les mécanismes qui relient les phénomènes
-        économiques aux réalités sociales.
+        Mon socle est l’économie (microéconomie, macroéconomie, finance publique, commerce international) et les
+        méthodes quantitatives (statistique, économétrie). Je m’en sers pour poser un cadre d’analyse, formuler des
+        hypothèses, et interpréter des résultats avec prudence.
         <br />
         <br />
-        Je développe des compétences en data science et apprentissage automatique pour mettre les
-        données au service de la réduction du chômage des jeunes en Afrique. J’ai lancé KORYXA,
-        une plateforme pensée pour connecter compétences, formation et emploi.
+        Sur le plan technique, je travaille avec Python, R et Stata pour l’analyse statistique, la préparation des
+        données, et la présentation des résultats. Je développe aussi des projets en apprentissage automatique et
+        un prototype autour des modèles de langage (LLM) via Streamlit.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Expériences",
+    display: true,
+    title: "Projets",
     experiences: [
       {
-        company: "Projet data – Tableau de bord emploi",
+        company: "Tableau de bord emploi",
         timeframe: "2024 - Aujourd’hui",
-        role: "Data analyst / data engineer",
+        role: "Analyse de données / ingénierie des données",
         achievements: [
-          <>
-            Construction d’un tableau de bord interactif sur l’emploi (indicateurs, filtres,
-            visualisations) à partir de données publiques.
-          </>,
-          <>
-            Automatisation de la collecte, du nettoyage et de l’actualisation des données dans un
-            pipeline reproductible (scripts + notebooks).
-          </>,
+          <>Tableau de bord sur l’emploi (indicateurs, filtres, visualisations) à partir de données publiques.</>,
+          <>Préparation des données : collecte, nettoyage, mise à jour via scripts et notebooks.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
             alt: "Capture de projet data",
@@ -157,96 +144,103 @@ const about: About = {
         ],
       },
       {
-        company: "Formation & projets académiques",
-        timeframe: "Avant 2024",
-        role: "Étudiant(e) / junior",
+        company: "Analyses économiques (notebooks)",
+        timeframe: "2023 - Aujourd’hui",
+        role: "Études quantitatives",
         achievements: [
-          <>
-            Réalisation de plusieurs études quantitatives (économie appliquée, statistiques,
-            économétrie) avec R / Python.
-          </>,
-          <>
-            Travail sur des mini-projets de groupe : analyse de données, rédaction de rapports,
-            présentations orales.
-          </>,
+          <>Analyses statistiques et économétriques avec R / Stata / Python.</>,
+          <>Rédaction de rapports et synthèses à partir de résultats chiffrés.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Études",
+    display: true,
+    title: "Parcours & certifications",
     institutions: [
       {
-        name: "Université (économie / data)",
-        description: (
-          <>Parcours en économie appliquée, statistiques et analyse de données.</>
-        ),
+        name: "Économie",
+        description: <>Formation en économie, statistique et économétrie.</>,
       },
       {
-        name: "Formations en ligne",
-        description: (
-          <>Cours et certifications en data (Python, notebooks, visualisation, machine learning).</>
-        ),
+        name: "Data / Machine Learning",
+        description: <>Formations et certifications en analyse de données, data engineering et apprentissage automatique.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Compétences techniques",
+    display: true,
+    title: "Économie & outils",
     skills: [
       {
-        title: "Python / R",
+        title: "Économie",
         description: (
-          <>Analyse de données, notebooks reproductibles, visualisations et reporting.</>
+          <>
+            Microéconomie, macroéconomie, économie internationale, économie du développement, finance publique.
+            Capacité à relier un cadre théorique à des données et à en tirer des enseignements.
+          </>
         ),
         tags: [
-          {
-            name: "Python",
-            icon: "python",
-          },
-          {
-            name: "R",
-            icon: "r",
-          },
+          { name: "Microéconomie", icon: "javascript" },
+          { name: "Macroéconomie", icon: "javascript" },
+          { name: "Économétrie", icon: "javascript" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Outils data & web",
+        title: "Analyse statistique",
         description: (
-          <>Création de dashboards simples et sites pour présenter les résultats et projets.</>
+          <>
+            Stata et R : régression, tests statistiques, analyse de séries temporelles selon les besoins de l’étude.
+          </>
         ),
         tags: [
-          {
-            name: "Excel",
-            icon: "excel",
-          },
+          { name: "Stata", icon: "javascript" },
+          { name: "R", icon: "r" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Python data",
+        description: (
+          <>
+            Préparation des données (pandas, numpy), visualisations, notebooks, automatisation de traitements.
+          </>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+          { name: "Pandas", icon: "python" },
+          { name: "NumPy", icon: "python" },
         ],
+        images: [],
+      },
+      {
+        title: "Machine Learning",
+        description: (
+          <>
+            Préparation des données, entraînement (classification, régression), validation et évaluation avec des métriques.
+          </>
+        ),
+        tags: [
+          { name: "Scikit-learn", icon: "python" },
+          { name: "Classification", icon: "python" },
+          { name: "Régression", icon: "python" },
+        ],
+        images: [],
+      },
+      {
+        title: "Rédaction de projet",
+        description: (
+          <>
+            Problématique, objectifs, méthodologie, budget, planification, restitution écrite et orale.
+          </>
+        ),
+        tags: [
+          { name: "Méthodologie", icon: "javascript" },
+          { name: "Reporting", icon: "javascript" },
+        ],
+        images: [],
       },
     ],
   },
@@ -255,70 +249,132 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Articles",
-  title: "Analyses et notes de blog",
-  description: `Articles courts sur mes projets, méthodes et réflexions autour de la data`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Analyses et notes",
+  description: "Notes sur mes projets, méthodes et retours d’expérience autour de la data.",
 };
 
 const work: Work = {
   path: "/work",
   label: "Projets",
   title: `Projets – ${person.name}`,
-  description: `Projets data et études menés par ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Projets data, machine learning et analyses menés par ${person.name}.`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Galerie",
   title: `Galerie – ${person.name}`,
-  description: `Sélection de visuels et captures liés à mes projets`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  description: `Captures et visuels liés à mes projets.`,
   images: [
+    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-4.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/vertical-2.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-3.jpg", alt: "image", orientation: "vertical" },
+  ],
+};
+
+const cv: CV = {
+  path: "/cv",
+  label: "CV",
+  title: `CV – ${person.name}`,
+  description: `Curriculum vitae de ${person.name} — ${person.role}`,
+  profile: {
+    summary: [
+      "Diplômé en économie, je relie analyse économique et analyse de données : cadrer une question, poser des hypothèses, préparer les données, analyser, puis présenter des résultats.",
+      "Outils : Python, R et Stata. Je travaille sur l’analyse statistique, la visualisation, et des tableaux de bord, avec une attention portée aux limites des données et à l’interprétation.",
+      "Je développe des projets en apprentissage automatique (classification, régression, évaluation) et un prototype LLM via Streamlit.",
+    ],
+  },
+  experience: {
+    work: [
+      {
+        company: "Tableau de bord emploi",
+        role: "Analyse de données / ingénierie des données",
+        timeframe: "2024 - Aujourd’hui",
+        achievements: [
+          "Tableau de bord sur l’emploi (indicateurs, filtres, visualisations) à partir de données publiques.",
+          "Préparation et mise à jour des données via scripts et notebooks.",
+        ],
+        technologies: ["Python", "Pandas", "Visualisation", "Tableaux de bord"],
+      },
+    ],
+    projects: [
+      {
+        name: "Projet Akowe - Indice SSA",
+        type: "Analyse de données (EdStats)",
+        description:
+          "Construction d’un indice pour prioriser les pays d’Afrique subsaharienne pour une EdTech en combinant 4 dimensions : taille du marché, dynamique, capacité de paiement et faisabilité opérationnelle.",
+        technologies: ["Python", "Jupyter", "Pandas", "Analyse de données"],
+        link: "https://github.com/Juniorleriche27/projet_edstat",
+      },
+      {
+        name: "Projets Force N - Data Analyse",
+        type: "Analyse de données (notebooks)",
+        description:
+          "Série de 3 notebooks : analyse des salaires (âge, genre, niveau d’études, expérience), analyse des ventes, prédiction de la réadmission de patients diabétiques.",
+        technologies: ["Python", "Jupyter", "Pandas", "Visualisation", "Classification"],
+        link: "https://github.com/Juniorleriche27/projet_data_analyse_force_n",
+      },
+      {
+        name: "Projet Zindi - Data Engineer Force N",
+        type: "Data engineering",
+        description:
+          "Nettoyage et fusion de données utilisateurs/transactions pour un challenge de détection de fraude : masquage des PII et export d’un CSV conforme.",
+        technologies: ["Python", "Data engineering", "ETL", "Qualité des données"],
+        link: "https://github.com/Juniorleriche27/projet_data_engenieur_force_n",
+      },
+    ],
+  },
+  education: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      degree: "Économie",
+      institution: "Université de Lomé",
+      timeframe: "",
+      description: "Formation en économie.",
     },
+  ],
+  skills: {
+    technical: [
+      {
+        category: "Économie",
+        items: ["Microéconomie", "Macroéconomie", "Économie monétaire internationale", "Économie du développement", "Finance publique", "Statistique avancée & économétrie"],
+      },
+      {
+        category: "Analyse de données",
+        items: ["Statistique & économétrie", "Python (pandas, numpy, matplotlib, seaborn, scikit-learn)", "R", "Stata", "Visualisation"],
+      },
+      {
+        category: "Machine Learning / LLM",
+        items: ["Classification", "Régression", "Évaluation", "Prototype LLM (Streamlit)"],
+      },
+      {
+        category: "Rédaction",
+        items: ["Rédaction de projet", "Méthodologie", "Reporting"],
+      },
+    ],
+  },
+  certifications: [
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
+      name: "Certificat Data Engineering",
+      issuer: "Force N",
+      // Place le PDF ici : public/certificats/force-n-data-engineering.pdf
+      link: "/certificats/force-n-data-engineering.pdf",
     },
+  ],
+  languages: [
+    { name: "Français", level: "Natif" },
+    { name: "Anglais", level: "Débutant-intermédiaire" },
+  ],
+  activities: [
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      name: "KORYXA",
+      description: "Projet de plateforme orientée compétences, formation et emploi. https://innovaplus.africa/",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, cv };
