@@ -83,7 +83,7 @@ export default function Home() {
                 id="about"
                 data-border="rounded"
                 href={about.path}
-                variant="ghost"
+                variant="tertiary"
                 size="m"
                 weight="default"
                 arrowIcon
@@ -148,7 +148,7 @@ export default function Home() {
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Projets récents
             </Heading>
-            <Button href="/work" variant="ghost" size="s" weight="default" arrowIcon>
+            <Button href="/work" variant="tertiary" size="s" weight="default" arrowIcon>
               Voir tous les projets
             </Button>
           </Row>
