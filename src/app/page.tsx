@@ -42,7 +42,7 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <RevealFx translateY="6" fillWidth>
+      <RevealFx translateY={6} fillWidth>
         <Row fillWidth gap="xl" s={{ direction: "column" }} vertical="center">
           <Column flex={7} gap="m">
             {home.featured.display && (
@@ -142,7 +142,7 @@ export default function Home() {
           </Column>
         </Row>
       </RevealFx>
-      <RevealFx translateY="16" delay={0.4} fillWidth>
+      <RevealFx translateY={16} delay={0.4} fillWidth>
         <Column fillWidth gap="24">
           <Row fillWidth horizontal="between" vertical="center" s={{ direction: "column" }}>
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
