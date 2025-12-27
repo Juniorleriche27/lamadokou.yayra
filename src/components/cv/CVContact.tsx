@@ -8,6 +8,8 @@ interface CVContactProps {
 }
 
 export function CVContact({ person, social }: CVContactProps) {
+  const displayLocation = person.locationLabel ?? person.location;
+
   return (
     <CVSection title="Contact" titleVariant="heading-strong-s">
       <Column gap="8">
@@ -15,7 +17,7 @@ export function CVContact({ person, social }: CVContactProps) {
           <Text variant="body-default-s">{person.email}</Text>
         </Row>
         <Row gap="8" vertical="center">
-          <Text variant="body-default-s">{person.location}</Text>
+          <Text variant="body-default-s">{displayLocation}</Text>
         </Row>
         {social.length > 0 && (
           <Row gap="8" wrap>

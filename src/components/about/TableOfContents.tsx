@@ -3,6 +3,7 @@
 import React from "react";
 import { Column, Flex, Text } from "@once-ui-system/core";
 import styles from "./about.module.scss";
+import { slugify } from "@/utils/slug";
 
 interface TableOfContentsProps {
   structure: {
@@ -56,7 +57,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
               className={styles.hover}
               gap="8"
               vertical="center"
-              onClick={() => scrollTo(section.title, 80)}
+              onClick={() => scrollTo(slugify(section.title), 80)}
             >
               <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
               <Text>{section.title}</Text>
@@ -72,7 +73,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                     gap="12"
                     paddingLeft="24"
                     vertical="center"
-                    onClick={() => scrollTo(item, 80)}
+                    onClick={() => scrollTo(slugify(item), 80)}
                   >
                     <Flex height="1" minWidth="8" background="neutral-strong"></Flex>
                     <Text>{item}</Text>

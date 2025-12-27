@@ -9,6 +9,7 @@ const person: Person = {
   avatar: "/images/ma_photo.jpeg",
   email: "ylamadokou@gmail.com",
   location: "Africa/Lome", // IANA time zone identifier
+  locationLabel: "Lomé, Togo",
   languages: ["Français", "Anglais"],
 };
 
@@ -68,24 +69,10 @@ const home: Home = {
   },
   subline: (
     <>
-      Diplômé en économie, j’ai construit une base solide en microéconomie, macroéconomie, finance publique,
-      commerce international, ainsi qu’en statistique et économétrie. Cette formation m’a appris à analyser un
-      problème, à structurer un raisonnement, et à relier les phénomènes économiques à leurs mécanismes :
-      croissance, fluctuations, échanges entre pays, et impacts sur la société, en particulier en Afrique.
+      Économiste orienté data. J’analyse des données publiques et construis des indicateurs utiles aux décisions
+      (emploi, éducation, développement).
       <br />
-      <br />
-      La statistique avancée et l’économétrie avancée m’ont donné une première approche de la modélisation :
-      comprendre un phénomène, le formaliser, tester des hypothèses, puis interpréter les résultats avec rigueur.
-      <br />
-      <br />
-      J’ai donc choisi d’approfondir l’aspect technique. J’ai commencé par Python, puis j’ai élargi vers l’analyse
-      de données et l’ingénierie des données, avant de me concentrer aujourd’hui sur l’apprentissage automatique.
-      Je travaille aussi avec R et Stata pour l’analyse statistique.
-      <br />
-      <br />
-      Mon objectif est d’utiliser les données et l’apprentissage automatique pour contribuer à réduire le chômage
-      des jeunes en Afrique. Dans cette logique, j’ai lancé KORYXA, une plateforme pensée pour connecter
-      compétences, formation et emploi.
+      J’outille ces analyses avec Python, R et Stata, et je développe des projets en data engineering et machine learning.
     </>
   ),
 };
@@ -131,17 +118,10 @@ const about: About = {
         timeframe: "2024 - Aujourd’hui",
         role: "Analyse de données / ingénierie des données",
         achievements: [
-          <>Tableau de bord sur l’emploi (indicateurs, filtres, visualisations) à partir de données publiques.</>,
+          <>Tableau de bord sur l'emploi (indicateurs, filtres, visualisations) à partir de données publiques.</>,
           <>Préparation des données : collecte, nettoyage, mise à jour via scripts et notebooks.</>,
         ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Capture de projet data",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
         company: "Analyses économiques (notebooks)",
