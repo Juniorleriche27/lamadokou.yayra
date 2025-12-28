@@ -40,6 +40,16 @@ export async function generateMetadata({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "blog", "posts"]);
+  if (posts.length === 0) {
+    return Meta.generate({
+      title: blog.title,
+      description: blog.description,
+      baseURL: baseURL,
+      image: `/api/og/generate?title=${encodeURIComponent(blog.title)}`,
+      path: blog.path,
+    });
+  }
+
   let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
@@ -59,7 +69,27 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slugPath);
+  const posts = getPosts(["src", "app", "blog", "posts"]);
+  if (posts.length === 0) {
+    return (
+      <Column maxWidth="m" paddingTop="24">
+        <Heading variant="heading-strong-xl">Articles à venir</Heading>
+        <Text variant="heading-default-m" onBackground="neutral-weak">
+          Aucun article n’est publié pour le moment. Revenez bientôt.
+        </Text>
+        <Row gap="12" wrap marginTop="m">
+          <SmartLink href="/blog">
+            <Text variant="label-strong-m">Retour aux articles</Text>
+          </SmartLink>
+          <SmartLink href="/work">
+            <Text variant="label-strong-m">Voir mes projets</Text>
+          </SmartLink>
+        </Row>
+      </Column>
+    );
+  }
+
+  let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
