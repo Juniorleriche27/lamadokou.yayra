@@ -351,6 +351,48 @@ const cv: CV = {
       // Place le PDF ici : public/certificats/force-n-data-engineering.pdf
       link: "/certificats/force-n-data-engineering.pdf",
     },
+    {
+      name: "Certificat Data Analysis",
+      issuer: "Force N",
+    },
+    {
+      name: "Développement Web - Niveau 1",
+    },
+    {
+      name: "Développement Web - Niveau 2",
+    },
+    {
+      name: "Développement Web - Niveau 3",
+    },
+    {
+      name: "ALX Professional Foundations",
+      issuer: "ALX",
+    },
+    {
+      name: "IA (DCLIC)",
+      issuer: "DCLIC",
+      date: "En cours",
+    },
+    {
+      name: "LLM",
+      issuer: "Force N",
+      date: "En cours",
+    },
+    {
+      name: "Data Analysis",
+      issuer: "ALX",
+      date: "En cours",
+    },
+    {
+      name: "Python",
+      issuer: "ALX",
+      date: "En cours",
+    },
+    {
+      name: "Machine Learning",
+      issuer: "ALX",
+      date: "En cours",
+    },
   ],
   languages: [
     { name: "Français", level: "Natif" },

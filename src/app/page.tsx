@@ -14,7 +14,6 @@ import {
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -156,17 +155,27 @@ export default function Home() {
         </Column>
       </RevealFx>
       {routes["/blog"] && (
-        <Column fillWidth gap="24" marginBottom="l">
-          <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
-            <Row flex={1} paddingLeft="l" paddingTop="24">
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Derniers articles
-              </Heading>
-            </Row>
-            <Row flex={3} paddingX="20">
-              <Posts range={[1, 2]} columns="2" />
-            </Row>
-          </Row>
+        <Column fillWidth gap="16" marginBottom="l">
+          <Heading as="h2" variant="display-strong-xs" wrap="balance">
+            Articles
+          </Heading>
+          <Card
+            fillWidth
+            padding="l"
+            radius="l-4"
+            border="neutral-alpha-weak"
+            background="page"
+            shadow="m"
+          >
+            <Column gap="8">
+              <Text variant="heading-default-m" onBackground="neutral-weak">
+                Les articles arrivent bientôt. Je publierai ici mes analyses et notes personnelles.
+              </Text>
+              <Button href="/blog" variant="tertiary" size="s" weight="default" arrowIcon>
+                Aller aux articles
+              </Button>
+            </Column>
+          </Card>
         </Column>
       )}
     </Column>

@@ -1,7 +1,5 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { Column, Heading, Meta, Schema, Text, Button, Row } from "@once-ui-system/core";
+import { baseURL, blog, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -29,17 +27,19 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        {blog.title}
-      </Heading>
-      <Column fillWidth flex={1} gap="40">
-        <Posts range={[1, 1]} thumbnail />
-        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
-        <Mailchimp marginBottom="l" />
-        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Earlier posts
-        </Heading>
-        <Posts range={[4]} columns="2" />
+      <Column fillWidth gap="m">
+        <Heading variant="heading-strong-xl">{blog.title}</Heading>
+        <Text variant="heading-default-m" onBackground="neutral-weak">
+          Les articles arrivent bientôt. Je prépare des analyses et des notes personnelles à publier ici.
+        </Text>
+        <Row gap="12" wrap>
+          <Button href="/about" variant="secondary" size="m" weight="default" arrowIcon>
+            Voir mon profil
+          </Button>
+          <Button href="/work" variant="tertiary" size="m" weight="default" arrowIcon>
+            Voir mes projets
+          </Button>
+        </Row>
       </Column>
     </Column>
   );
