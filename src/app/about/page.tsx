@@ -190,7 +190,7 @@ export default function About() {
               </Heading>
               <Column gap="l">
                 {cv.experience.work.map((work, index) => (
-                  <Column key={index} gap="6">
+                  <Column key={index} gap="8">
                     <Row horizontal="between" vertical="center" wrap>
                       <Heading variant="heading-strong-m">{work.company}</Heading>
                       <Text variant="body-default-xs" onBackground="neutral-weak">
@@ -200,7 +200,7 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="neutral-weak">
                       {work.role}
                     </Text>
-                    <Column as="ul" gap="6" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    <Column as="ul" gap="8" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {work.achievements.map((achievement, itemIndex) => (
                         <Text key={itemIndex} as="li" variant="body-default-s">
                           - {achievement}
@@ -220,7 +220,7 @@ export default function About() {
               </Heading>
               <Column gap="l">
                 {cv.experience.projects.map((project, index) => (
-                  <Column key={index} gap="6">
+                  <Column key={index} gap="8">
                     <Row horizontal="between" vertical="center" wrap>
                       <Heading variant="heading-strong-m">{project.name}</Heading>
                       <Text variant="body-default-xs" onBackground="neutral-weak">
