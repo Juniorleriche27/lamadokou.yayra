@@ -5,17 +5,15 @@ import {
   Heading,
   Icon,
   IconButton,
-  Media,
+  Line,
+  Meta,
+  Row,
+  Schema,
   Tag,
   Text,
-  Meta,
-  Schema,
-  Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL, about, person, social, cv } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
-import React from "react";
 import { slugify } from "@/utils/slug";
 
 export async function generateMetadata() {
@@ -30,30 +28,38 @@ export async function generateMetadata() {
 
 export default function About() {
   const displayLocation = person.locationLabel ?? person.location;
+
   const structure = [
+    { title: "Profil", display: cv.profile.summary.length > 0, items: [] },
     {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
+      title: "Compétences",
+      display: cv.skills.technical.length > 0,
+      items: cv.skills.technical.map((category) => category.category),
     },
     {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      title: "Expérience professionnelle",
+      display: cv.experience.work.length > 0,
+      items: cv.experience.work.map((work) => work.company),
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      title: "Projets",
+      display: cv.experience.projects.length > 0,
+      items: cv.experience.projects.map((project) => project.name),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      title: "Formation",
+      display: cv.education.length > 0,
+      items: cv.education.map((education) => education.degree),
+    },
+    {
+      title: "Certifications",
+      display: cv.certifications.length > 0,
+      items: cv.certifications.map((certification) => certification.name),
     },
   ];
+
   return (
-    <Column maxWidth="m">
+    <Column maxWidth="l" gap="xl">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -70,22 +76,10 @@ export default function About() {
       {about.tableOfContent.display && (
         <TableOfContents structure={structure} about={about} />
       )}
-      <Row fillWidth s={{ direction: "column" }} horizontal="center">
-        {about.avatar.display && (
-          <Column
-            className={styles.avatar}
-            top="64"
-            fitHeight
-            position="sticky"
-            s={{ position: "relative", style: { top: "auto" } }}
-            xs={{ style: { top: "auto" } }}
-            minWidth={200}
-            paddingX="l"
-            paddingBottom="xl"
-            gap="m"
-            flex={3}
-            horizontal="center"
-          >
+
+      <Column fillWidth gap="xl">
+        <Row fillWidth gap="xl" s={{ direction: "column" }} vertical="center">
+          <Column flex={4} gap="m" horizontal="center">
             <Avatar src={person.avatar} size="xl" />
             <Heading variant="heading-strong-l" align="center">
               {person.name}
@@ -97,15 +91,15 @@ export default function About() {
               <Icon onBackground="accent-weak" name="globe" />
               <Text variant="body-default-s">{displayLocation}</Text>
             </Row>
-            {person.languages && person.languages.length > 0 && (
+            {cv.languages.length > 0 && (
               <Column gap="8" fillWidth>
                 <Text variant="label-default-s" onBackground="neutral-weak" align="center">
                   Langues
                 </Text>
                 <Row wrap gap="8" horizontal="center">
-                  {person.languages.map((language, index) => (
+                  {cv.languages.map((language, index) => (
                     <Tag key={index} size="l">
-                      {language}
+                      {language.name}
                     </Tag>
                   ))}
                 </Row>
@@ -135,207 +129,184 @@ export default function About() {
                 </Row>
               </Column>
             )}
-            <Row fillWidth marginTop="m">
+            <Row gap="12" wrap horizontal="center">
               <Button
                 href="/cv.pdf"
                 variant="primary"
-                size="m"
+                size="s"
                 weight="default"
                 prefixIcon="document"
-                fillWidth
                 target="_blank"
               >
                 Télécharger mon CV
               </Button>
+              <Button href="/work" variant="secondary" size="s" weight="default" arrowIcon>
+                Voir mes projets
+              </Button>
             </Row>
           </Column>
-        )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <Column
-            id={slugify(about.intro.title)}
-            fillWidth
-            minHeight="160"
-            vertical="center"
-            marginBottom="32"
-          >
-            {about.calendar.display && (
-              <Row
-                fitWidth
-                border="brand-alpha-medium"
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Row>
-            )}
+
+          <Column flex={8} gap="m">
+            <Heading id={slugify("Profil")} variant="display-strong-s">
+              Profil
+            </Heading>
+            <Column gap="8">
+              {cv.profile.summary.map((paragraph, index) => (
+                <Text key={index} variant="body-default-m" onBackground="neutral-weak">
+                  {paragraph}
+                </Text>
+              ))}
+            </Column>
+          </Column>
+        </Row>
+
+        <Line />
+
+        <Column gap="xl">
+          <Column gap="m">
+            <Heading id={slugify("Compétences")} variant="display-strong-s">
+              Compétences
+            </Heading>
+            <Column gap="l">
+              {cv.skills.technical.map((category, index) => (
+                <Column key={index} gap="8">
+                  <Text variant="heading-strong-m">{category.category}</Text>
+                  <Row wrap gap="8">
+                    {category.items.map((item, itemIndex) => (
+                      <Tag key={itemIndex} size="m">
+                        {item}
+                      </Tag>
+                    ))}
+                  </Row>
+                </Column>
+              ))}
+            </Column>
           </Column>
 
-          {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
+          {cv.experience.work.length > 0 && (
+            <Column gap="m">
+              <Heading id={slugify("Expérience professionnelle")} variant="display-strong-s">
+                Expérience professionnelle
+              </Heading>
+              <Column gap="l">
+                {cv.experience.work.map((work, index) => (
+                  <Column key={index} gap="6">
+                    <Row horizontal="between" vertical="center" wrap>
+                      <Heading variant="heading-strong-m">{work.company}</Heading>
+                      <Text variant="body-default-xs" onBackground="neutral-weak">
+                        {work.timeframe}
+                      </Text>
+                    </Row>
+                    <Text variant="body-default-s" onBackground="neutral-weak">
+                      {work.role}
+                    </Text>
+                    <Column as="ul" gap="6" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      {work.achievements.map((achievement, itemIndex) => (
+                        <Text key={itemIndex} as="li" variant="body-default-s">
+                          - {achievement}
+                        </Text>
+                      ))}
+                    </Column>
+                  </Column>
+                ))}
+              </Column>
             </Column>
           )}
 
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={slugify(about.technical.title)}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.technical.title}
+          {cv.experience.projects.length > 0 && (
+            <Column gap="m">
+              <Heading id={slugify("Projets")} variant="display-strong-s">
+                Projets
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text id={slugify(skill.title)} variant="heading-strong-l">
-                      {skill.title}
-                    </Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.tags && skill.tags.length > 0 && (
-                      <Row wrap gap="8" paddingTop="8">
-                        {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
-                            {tag.name}
-                          </Tag>
-                        ))}
-                      </Row>
-                    )}
-                    {skill.images && skill.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.work.display && (
-            <>
-              <Heading
-                as="h2"
-                id={slugify(about.work.title)}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.work.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={slugify(experience.company)} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
+              <Column gap="l">
+                {cv.experience.projects.map((project, index) => (
+                  <Column key={index} gap="6">
+                    <Row horizontal="between" vertical="center" wrap>
+                      <Heading variant="heading-strong-m">{project.name}</Heading>
+                      <Text variant="body-default-xs" onBackground="neutral-weak">
+                        {project.type}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
+                    <Text variant="body-default-s" onBackground="neutral-weak">
+                      {project.description}
                     </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: React.ReactNode, index: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        ),
-                      )}
-                    </Column>
-                    {experience.images && experience.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
-                        {experience.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
+                    {project.link && (
+                      <Button
+                        href={project.link}
+                        variant="tertiary"
+                        size="s"
+                        weight="default"
+                        arrowIcon
+                        target="_blank"
+                      >
+                        Voir le dépôt
+                      </Button>
                     )}
                   </Column>
                 ))}
               </Column>
-            </>
+            </Column>
           )}
 
-          {about.studies.display && (
-            <>
-              <Heading
-                as="h2"
-                id={slugify(about.studies.title)}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.studies.title}
+          {cv.education.length > 0 && (
+            <Column gap="m">
+              <Heading id={slugify("Formation")} variant="display-strong-s">
+                Formation
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={slugify(institution.name)} variant="heading-strong-l">
-                      {institution.name}
+              <Column gap="l">
+                {cv.education.map((education, index) => (
+                  <Column key={index} gap="4">
+                    <Row horizontal="between" vertical="center" wrap>
+                      <Heading variant="heading-strong-m">{education.degree}</Heading>
+                      <Text variant="body-default-xs" onBackground="neutral-weak">
+                        {education.timeframe}
+                      </Text>
+                    </Row>
+                    <Text variant="body-default-s" onBackground="neutral-weak">
+                      {education.institution}
                     </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
+                    {education.description && (
+                      <Text variant="body-default-s" onBackground="neutral-weak">
+                        {education.description}
+                      </Text>
+                    )}
                   </Column>
                 ))}
               </Column>
-            </>
+            </Column>
+          )}
+
+          {cv.certifications.length > 0 && (
+            <Column gap="m">
+              <Heading id={slugify("Certifications")} variant="display-strong-s">
+                Certifications
+              </Heading>
+              <Column gap="8">
+                {cv.certifications.map((certification, index) => (
+                  <Row key={index} gap="8" vertical="center" wrap>
+                    <Text variant="body-default-s">
+                      {certification.name}
+                      {certification.issuer && ` - ${certification.issuer}`}
+                    </Text>
+                    {certification.link && (
+                      <Button
+                        href={certification.link}
+                        variant="tertiary"
+                        size="s"
+                        weight="default"
+                        arrowIcon
+                        target="_blank"
+                      >
+                        Voir le certificat
+                      </Button>
+                    )}
+                  </Row>
+                ))}
+              </Column>
+            </Column>
           )}
         </Column>
-      </Row>
+      </Column>
     </Column>
   );
 }

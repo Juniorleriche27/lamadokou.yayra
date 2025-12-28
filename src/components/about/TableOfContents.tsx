@@ -46,6 +46,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
       position="fixed"
       paddingLeft="24"
       gap="32"
+      zIndex={2}
       m={{ hide: true }}
     >
       {structure

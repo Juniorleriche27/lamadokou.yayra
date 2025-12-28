@@ -1,4 +1,4 @@
-import { About, Blog, CV, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, CV, Debate, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -230,7 +230,14 @@ const blog: Blog = {
   path: "/blog",
   label: "Articles",
   title: "Analyses et notes",
-  description: "Notes sur mes projets, méthodes et retours d’expérience autour de la data.",
+  description: "Notes sur mes projets, méthodes et retours d'expérience autour de la data.",
+};
+
+const debate: Debate = {
+  path: "/debat",
+  label: "Débat",
+  title: `Débat - ${person.name}`,
+  description: "Espace de débats et d’échanges autour de l’économie, la data et le développement.",
 };
 
 const work: Work = {
@@ -357,4 +364,4 @@ const cv: CV = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery, cv };
+export { person, social, newsletter, home, about, blog, debate, work, gallery, cv };

@@ -242,6 +242,12 @@ export interface Gallery extends BasePageConfig {
 }
 
 /**
+ * Debate page configuration.
+ * @description Configuration for the Debate page, including metadata and navigation label.
+ */
+export interface Debate extends BasePageConfig {}
+
+/**
  * CV/Resume configuration.
  * @description Professional CV structure for Campus France and professional use.
  */

@@ -6,6 +6,7 @@ export {
   home,
   about,
   blog,
+  debate,
   work,
   gallery,
   cv,
