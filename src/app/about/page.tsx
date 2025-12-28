@@ -73,11 +73,14 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      {about.tableOfContent.display && (
-        <TableOfContents structure={structure} about={about} />
-      )}
+      <Row fillWidth gap="xl" s={{ direction: "column" }}>
+        {about.tableOfContent.display && (
+          <Column flex={2} s={{ hide: true }} style={{ maxWidth: "240px" }}>
+            <TableOfContents structure={structure} about={about} />
+          </Column>
+        )}
 
-      <Column fillWidth gap="xl">
+        <Column flex={8} fillWidth gap="xl">
         <Row fillWidth gap="xl" s={{ direction: "column" }} vertical="center">
           <Column flex={4} gap="m" horizontal="center">
             <Avatar src={person.avatar} size="xl" />
@@ -306,7 +309,8 @@ export default function About() {
             </Column>
           )}
         </Column>
-      </Column>
+        </Column>
+      </Row>
     </Column>
   );
 }
