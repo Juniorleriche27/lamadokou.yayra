@@ -288,6 +288,62 @@ const cv: CV = {
         ],
         technologies: ["Python", "Pandas", "Visualisation", "Tableaux de bord"],
       },
+      {
+        company: "ONG Synpa Togo",
+        role: "Stagiaire",
+        timeframe: "2023",
+        location: "Lomé",
+        achievements: ["Audit interne", "Aide à la rédaction des budgets"],
+      },
+      {
+        company: "Société Belmas Consulting",
+        role: "Collecteur de loyers",
+        timeframe: "2023",
+        location: "Lomé",
+        achievements: ["Collecte de loyers dans le secteur immobilier"],
+      },
+      {
+        company: "Boutique de recharges de gaz",
+        role: "Assistant",
+        timeframe: "2022",
+        location: "Lomé",
+        achievements: ["Gestion de la boutique", "Service clientèle"],
+      },
+      {
+        company: "Établissement Grace Divine",
+        role: "Vendeur",
+        timeframe: "2022",
+        location: "Lomé",
+        achievements: ["Vente de fauteuils bourrés"],
+      },
+      {
+        company: "VIVA PLUS",
+        role: "Responsable",
+        timeframe: "2021",
+        location: "Lomé",
+        achievements: ["Production et commercialisation de produits laitiers et de jus de fruits"],
+      },
+      {
+        company: "Société Nouvelle Semence",
+        role: "Commercial",
+        timeframe: "2016",
+        location: "Lomé",
+        achievements: [
+          "Campagnes de vente sur tout le territoire togolais",
+          "Prospection, négociation et fidélisation de clients",
+        ],
+      },
+      {
+        company: "Établissement BLESSING BODY",
+        role: "Gérant",
+        timeframe: "2014",
+        location: "Notse",
+        achievements: [
+          "Gestion de la boutique",
+          "Achat et vente de matériels électroniques",
+          "Accueil des clients et gestion des ventes",
+        ],
+      },
     ],
     projects: [
       {
