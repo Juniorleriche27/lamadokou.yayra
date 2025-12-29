@@ -419,6 +419,48 @@ const cv: CV = {
       name: "KORYXA",
       description: "Projet de plateforme orientée compétences, formation et emploi. https://innovaplus.africa/",
     },
+    {
+      name: "SEDD - Kits scolaires",
+      timeframe: "2018",
+      description:
+        "Participation à l'activité SEDD : distribution de kits scolaires aux enfants démunis et déscolarisés.",
+    },
+    {
+      name: "Distribution de kits scolaires",
+      timeframe: "2019",
+      description:
+        "Organisation d’une distribution de kits scolaires avec un groupe de jeunes chrétiens.",
+    },
+    {
+      name: "SEDD - Kits scolaires",
+      timeframe: "2020",
+      description:
+        "Organisation de l'activité SEDD : distribution de kits scolaires aux enfants défavorisés.",
+    },
+    {
+      name: "VIVA PLUS",
+      timeframe: "2021",
+      description:
+        "Lancement d’une entreprise de production de jus de fruits et de produits laitiers (activité arrêtée par manque de soutien).",
+    },
+    {
+      name: "Louga de la Maison",
+      timeframe: "2022",
+      description:
+        "Co-fondateur d’une entreprise de transformation d’arachides en amuse-gueules (Louga).",
+    },
+    {
+      name: "Union des Personnes Engagées (UPE)",
+      timeframe: "2023",
+      description:
+        "Création d’une association en cours visant à intervenir dans cinq domaines (Économie, Environnement, Éducation, Santé, Technologie). Participation au concours Mon idée, mon entreprise (AUF).",
+    },
+    {
+      name: "Phoenix Éducatif",
+      timeframe: "2024",
+      description:
+        "Membre fondateur d’une association en cours de création avec d’anciens élèves du lycée de Davie.",
+    },
   ],
 };
 

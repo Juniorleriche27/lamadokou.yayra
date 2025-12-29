@@ -56,6 +56,11 @@ export default function About() {
       display: cv.certifications.length > 0,
       items: cv.certifications.map((certification) => certification.name),
     },
+    {
+      title: "Activités associatives",
+      display: !!cv.activities?.length,
+      items: (cv.activities ?? []).map((activity) => activity.name),
+    },
   ];
 
   return (
@@ -304,6 +309,33 @@ export default function About() {
                       </Button>
                     )}
                   </Row>
+                ))}
+              </Column>
+            </Column>
+          )}
+
+          {cv.activities && cv.activities.length > 0 && (
+            <Column gap="m">
+              <Heading id={slugify("Activités associatives")} variant="display-strong-s">
+                Activités associatives
+              </Heading>
+              <Column gap="l">
+                {cv.activities.map((activity, index) => (
+                  <Column key={index} gap="8">
+                    <Row horizontal="between" vertical="center" wrap>
+                      <Heading variant="heading-strong-m">{activity.name}</Heading>
+                      {activity.timeframe && (
+                        <Text variant="body-default-xs" onBackground="neutral-weak">
+                          {activity.timeframe}
+                        </Text>
+                      )}
+                    </Row>
+                    {activity.description && (
+                      <Text variant="body-default-s" onBackground="neutral-weak">
+                        {activity.description}
+                      </Text>
+                    )}
+                  </Column>
                 ))}
               </Column>
             </Column>
