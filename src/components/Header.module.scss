@@ -19,3 +19,48 @@
         bottom: 0;
     }
 }
+
+.metaBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--neutral-alpha-medium);
+    background: var(--neutral-alpha-weak);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.metaDot {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.6;
+    box-shadow: 0 0 0 4px var(--neutral-alpha-weak);
+}
+
+.metaText {
+    font-size: 0.85rem;
+}
+
+.timeBadge {
+    padding: 0.4rem 0.75rem;
+}
+
+.timeLabel {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.timeValue {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+}

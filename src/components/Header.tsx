@@ -74,7 +74,12 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{displayLocation}</Row>}
+          {display.location && (
+            <Row className={styles.metaBadge} gap="8" vertical="center" s={{ hide: true }}>
+              <span className={styles.metaDot} />
+              <span className={styles.metaText}>{displayLocation}</span>
+            </Row>
+          )}
         </Row>
         <Row fillWidth horizontal="center">
           <Row
@@ -204,7 +209,14 @@ export const Header = () => {
             gap="20"
           >
             <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
+              {display.time && (
+                <Row className={`${styles.metaBadge} ${styles.timeBadge}`} gap="8" vertical="center">
+                  <span className={styles.timeLabel}>Heure locale</span>
+                  <span className={styles.timeValue}>
+                    <TimeDisplay timeZone={person.location} />
+                  </span>
+                </Row>
+              )}
             </Flex>
           </Flex>
         </Flex>
