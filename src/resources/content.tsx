@@ -291,6 +291,14 @@ const cv: CV = {
     ],
     projects: [
       {
+        name: "Market Prices Data Product",
+        type: "Data product",
+        description:
+          "Application Streamlit pour suivre les prix des denrées en Afrique de l’Ouest : génération des données, nettoyage, métriques de qualité et insights économiques assistés par IA.",
+        technologies: ["Python", "Streamlit", "Data quality", "Pipeline"],
+        link: "https://github.com/Juniorleriche27/Market-Prices-Data-Product",
+      },
+      {
         name: "Projet Akowe - Indice SSA",
         type: "Analyse de données (EdStats)",
         description:
