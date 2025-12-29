@@ -291,6 +291,14 @@ const cv: CV = {
     ],
     projects: [
       {
+        name: "FarmLink Copilot (RAG)",
+        type: "RAG / LLM",
+        description:
+          "Assistant RAG pour les filières agricoles d’Afrique de l’Ouest, avec interface Streamlit, backend FastAPI et base vectorielle Qdrant.",
+        technologies: ["Python", "RAG", "LLM", "FastAPI", "Streamlit", "Qdrant"],
+        link: "https://github.com/Juniorleriche27/FarmLink",
+      },
+      {
         name: "Market Prices Data Product",
         type: "Data product",
         description:
