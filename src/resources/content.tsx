@@ -426,15 +426,23 @@ const cv: CV = {
     {
       name: "Certificat Data Analysis",
       issuer: "Force N",
+      link: "/certificats/certificat-data-analyse.pdf",
     },
     {
       name: "Développement Web - Niveau 1",
+      link: "/certificats/dev-web-debutant.pdf",
     },
     {
       name: "Développement Web - Niveau 2",
+      link: "/certificats/dev-web-intermediaire.pdf",
     },
     {
       name: "Développement Web - Niveau 3",
+      link: "/certificats/dev-web-avance.pdf",
+    },
+    {
+      name: "Certificat d’anglais",
+      link: "/certificats/certificat-anglais.pdf",
     },
     {
       name: "ALX Professional Foundations",
