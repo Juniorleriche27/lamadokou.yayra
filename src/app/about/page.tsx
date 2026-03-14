@@ -247,7 +247,19 @@ export default function About() {
                         arrowIcon
                         target="_blank"
                       >
-                        Voir le dépôt
+                        Voir le depot
+                      </Button>
+                    )}
+                    {project.website && (
+                      <Button
+                        href={project.website}
+                        variant="tertiary"
+                        size="s"
+                        weight="default"
+                        arrowIcon
+                        target="_blank"
+                      >
+                        Voir le site
                       </Button>
                     )}
                   </Column>

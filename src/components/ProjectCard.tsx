@@ -19,6 +19,7 @@ interface ProjectCardProps {
   description: string;
   avatars: { src: string }[];
   link: string;
+  website?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -29,6 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
+  website,
 }) => {
   const hasImages = images.length > 0;
 
@@ -73,7 +75,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   style={{ margin: "0", width: "fit-content" }}
                   href={href}
                 >
-                  <Text variant="body-default-s">Voir le détail</Text>
+                  <Text variant="body-default-s">Voir le detail</Text>
                 </SmartLink>
               )}
               {link && (
@@ -82,7 +84,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   style={{ margin: "0", width: "fit-content" }}
                   href={link}
                 >
-                  <Text variant="body-default-s">Voir le dépôt</Text>
+                  <Text variant="body-default-s">Voir le depot</Text>
+                </SmartLink>
+              )}
+              {website && (
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={website}
+                >
+                  <Text variant="body-default-s">Voir le site</Text>
                 </SmartLink>
               )}
             </Flex>

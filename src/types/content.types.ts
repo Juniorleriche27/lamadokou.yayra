@@ -286,6 +286,8 @@ export interface CV extends BasePageConfig {
       technologies: string[];
       /** Project link (optional) */
       link?: string;
+      /** Project website/demo (optional) */
+      website?: string;
     }>;
   };
   /** Education section */

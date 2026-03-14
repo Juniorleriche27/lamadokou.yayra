@@ -118,6 +118,34 @@ export default async function Project({
           </Text>
         </Row>
       </Row>
+      {(post.metadata.link || post.metadata.website) && (
+        <Row marginBottom="24" gap="12" horizontal="center" wrap>
+          {post.metadata.link && (
+            <Button
+              href={post.metadata.link}
+              variant="secondary"
+              size="s"
+              weight="default"
+              arrowIcon
+              target="_blank"
+            >
+              Voir le depot
+            </Button>
+          )}
+          {post.metadata.website && (
+            <Button
+              href={post.metadata.website}
+              variant="secondary"
+              size="s"
+              weight="default"
+              arrowIcon
+              target="_blank"
+            >
+              Voir le site
+            </Button>
+          )}
+        </Row>
+      )}
       {post.metadata.images.length > 0 && (
         <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
       )}

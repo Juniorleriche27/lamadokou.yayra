@@ -385,6 +385,7 @@ const cv: CV = {
           "Prediction de la consommation d'energie et des emissions de CO2 de batiments a partir de donnees de benchmarking, avec notebooks, modeles finaux XGBoost et API FastAPI.",
         technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "FastAPI"],
         link: "https://github.com/Juniorleriche27/Projet_Machine_Learning",
+        website: "https://energi-sight.vercel.app",
       },
       {
         name: "Projet Zindi - Data Engineer Force N",

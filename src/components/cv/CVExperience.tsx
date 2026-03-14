@@ -9,9 +9,8 @@ interface CVExperienceProps {
 export function CVExperience({ experience }: CVExperienceProps) {
   return (
     <>
-      {/* Work Experience */}
       {experience.work.length > 0 && (
-        <CVSection title="Expérience professionnelle">
+        <CVSection title="Experience professionnelle">
           <Column gap="l">
             {experience.work.map((work, index) => (
               <Column key={index} gap="8" marginBottom="m">
@@ -34,7 +33,7 @@ export function CVExperience({ experience }: CVExperienceProps) {
                 <Column gap="4" as="ul" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {work.achievements.map((achievement, idx) => (
                     <Text key={idx} as="li" variant="body-default-s">
-                      • {achievement}
+                      - {achievement}
                     </Text>
                   ))}
                 </Column>
@@ -53,7 +52,6 @@ export function CVExperience({ experience }: CVExperienceProps) {
         </CVSection>
       )}
 
-      {/* Projects */}
       {experience.projects.length > 0 && (
         <CVSection title="Projets">
           <Column gap="l">
@@ -66,17 +64,33 @@ export function CVExperience({ experience }: CVExperienceProps) {
                   </Text>
                 </Row>
                 <Text variant="body-default-s">{project.description}</Text>
-                {project.link && (
-                  <Text variant="body-default-xs">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "inherit", textDecoration: "underline" }}
-                    >
-                      Voir le projet →
-                    </a>
-                  </Text>
+                {(project.link || project.website) && (
+                  <Row gap="12" wrap>
+                    {project.link && (
+                      <Text variant="body-default-xs">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "inherit", textDecoration: "underline" }}
+                        >
+                          Voir le depot -&gt;
+                        </a>
+                      </Text>
+                    )}
+                    {project.website && (
+                      <Text variant="body-default-xs">
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "inherit", textDecoration: "underline" }}
+                        >
+                          Voir le site -&gt;
+                        </a>
+                      </Text>
+                    )}
+                  </Row>
                 )}
                 <Row gap="8" wrap>
                   {project.technologies.map((tech, idx) => (
