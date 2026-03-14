@@ -388,6 +388,14 @@ const cv: CV = {
         website: "https://energi-sight.vercel.app",
       },
       {
+        name: "Projet Phase 3 - AgriSmart",
+        type: "Deep learning / vision par ordinateur",
+        description:
+          "Prototype de detection de maladies des cultures a partir d'images de feuilles, avec comparaison entre un CNN simple et MobileNetV2, plus une API FastAPI et une application mobile Expo.",
+        technologies: ["Python", "TensorFlow", "Keras", "MobileNetV2", "FastAPI", "Expo"],
+        link: "https://github.com/Juniorleriche27/AgriSmart",
+      },
+      {
         name: "Projet Zindi - Data Engineer Force N",
         type: "Data engineering",
         description:
