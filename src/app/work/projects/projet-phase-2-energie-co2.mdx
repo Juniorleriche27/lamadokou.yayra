@@ -1,0 +1,31 @@
+---
+title: "Projet Phase 2 - Prediction energie et CO2"
+publishedAt: "2024-10-09"
+summary: "Projet de machine learning supervise pour predire la consommation d'energie et les emissions de CO2 de batiments a partir de donnees de benchmarking."
+images: []
+link: "https://github.com/Juniorleriche27/Projet_Machine_Learning"
+---
+
+## Objectif
+
+Predire deux cibles sur des batiments:
+
+- `SiteEnergyUse(kBtu)` pour la consommation d'energie
+- `TotalGHGEmissions` pour les emissions de CO2
+
+## Contenu
+
+- Trois notebooks de travail: exploration generale, modele energie, modele CO2
+- Feature engineering et pretraitement pour variables numeriques et categorielles
+- Artefacts finaux separes pour les deux modeles
+- API FastAPI deployable avec endpoints de prediction `energy`, `co2` et `both`
+
+## Resultats
+
+- Energie: `R2 test = 0.852`
+- CO2: `R2 test = 0.841`
+- Gain net sur la baseline sur les deux cibles
+
+## Outils
+
+Python, pandas, scikit-learn, XGBoost, FastAPI, joblib.

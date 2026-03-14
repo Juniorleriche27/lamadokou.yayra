@@ -379,6 +379,14 @@ const cv: CV = {
         link: "https://github.com/Juniorleriche27/projet_data_analyse_force_n",
       },
       {
+        name: "Projet Phase 2 - Prediction energie et CO2",
+        type: "Machine learning supervise",
+        description:
+          "Prediction de la consommation d'energie et des emissions de CO2 de batiments a partir de donnees de benchmarking, avec notebooks, modeles finaux XGBoost et API FastAPI.",
+        technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "FastAPI"],
+        link: "https://github.com/Juniorleriche27/Projet_Machine_Learning",
+      },
+      {
         name: "Projet Zindi - Data Engineer Force N",
         type: "Data engineering",
         description:
