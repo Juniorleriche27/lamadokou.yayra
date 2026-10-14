@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Lamadokou",
   name: "Yayra Lamadokou",
   role: "Diplômé en économie • Data • Machine Learning",
-  avatar: "/images/ma_photo.jpeg",
+  avatar: "/images/portrait-junior.webp",
   email: "ylamadokou@gmail.com",
   location: "Africa/Lome", // IANA time zone identifier
   locationLabel: "Lomé, Togo",

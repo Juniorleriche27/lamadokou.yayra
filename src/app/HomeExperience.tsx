@@ -33,7 +33,7 @@ export default function HomeExperience() {
           </div>
           <aside className={styles.heroAside} aria-label="Indicateurs du portfolio">
             <div className={styles.panelTop}><span className={styles.orbit} /> {en ? "SYSTEM STATUS" : "ÉTAT DU SYSTÈME"} <span className={styles.systemOnline}>● {en ? "OPERATIONAL" : "OPÉRATIONNEL"}</span></div>
-            <div className={styles.visualCore}><div className={styles.coreRing}><div className={styles.coreRingInner}><span>YL</span></div></div><span className={styles.coreCaption}>{en ? "ENGINEERING REAL-WORLD AI" : "INGÉNIERIE IA CONCRÈTE"}</span></div>
+            <div className={styles.visualCore}><div className={styles.coreRing}><div className={styles.coreRingInner}><img className={styles.profilePortrait} src="/images/portrait-junior.webp" alt="Portrait professionnel de Yayra Junior Lamadokou" width="114" height="114" loading="eager" decoding="async" /></div></div><span className={styles.coreCaption}>{en ? "ENGINEERING REAL-WORLD AI" : "INGÉNIERIE IA CONCRÈTE"}</span></div>
             <div className={styles.metricGrid}>
               <div><strong>{ecosystemProjects.length.toString().padStart(2,"0")}</strong><span>{en ? "PROJECTS" : "PROJETS RECENSÉS"}</span></div>
               <div><strong>{live.toString().padStart(2,"0")}</strong><span>{en ? "URLS REACHABLE AT SCAN" : "URLS ACCESSIBLES AU SCAN"}</span></div>

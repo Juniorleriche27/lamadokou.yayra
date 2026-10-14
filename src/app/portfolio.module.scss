@@ -45,3 +45,18 @@
 :global(html[data-theme="light"]) .contactSection p:not(.eyebrow){color:#506e7b}
 :global(html[data-theme="light"]) .footer{color:#728b94}
 :global(html[data-theme="light"]) .footer a{color:#0e7188}
+
+/* Portrait supplied by portfolio owner: retained across light/dark themes. */
+.profilePortrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 3px solid rgba(255,255,255,.7);
+  box-shadow: 0 10px 28px rgba(8,39,48,.12);
+}
+:global(html[data-theme="dark"]) .profilePortrait {
+  border-color: rgba(167,255,131,.4);
+}
