@@ -7,6 +7,7 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, debate, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle, useSiteLanguage } from "./LanguageToggle";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -44,6 +45,7 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const lang = useSiteLanguage();
   const displayLocation = person.locationLabel ?? person.location;
 
   return (
@@ -102,7 +104,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="person"
                       href="/about"
-                      label={about.label}
+                      label={lang === "fr" ? "À propos" : "About"}
                       selected={pathname === "/about"}
                     />
                   </Row>
@@ -121,7 +123,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
-                      label={work.label}
+                      label={lang === "fr" ? "Projets" : "Projects"}
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
@@ -140,7 +142,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="book"
                       href="/blog"
-                      label={blog.label}
+                      label={lang === "fr" ? "Articles" : "Articles"}
                       selected={pathname.startsWith("/blog")}
                     />
                   </Row>
@@ -159,7 +161,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="debate"
                       href="/debat"
-                      label={debate.label}
+                      label={lang === "fr" ? "Débat" : "Debate"}
                       selected={pathname.startsWith("/debat")}
                     />
                   </Row>
@@ -191,6 +193,7 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              <LanguageToggle />
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
