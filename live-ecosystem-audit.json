@@ -1,0 +1,446 @@
+[
+  {
+    "name": "assistant-pieagency",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://assistant-pieagency.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/assistant-pieagency",
+    "private": true,
+    "source": "assistant-pieagency",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "collectifzeroindigent",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://collectifzeroindigent.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/collectifzeroindigent",
+    "private": false,
+    "source": "collectifzeroindigent",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "CoraBiz",
+    "tagline": "Assistant commercial et suivi de prospects",
+    "stack": [
+      "SaaS",
+      "IA"
+    ],
+    "url": "https://corabiz.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/corabiz",
+    "private": true,
+    "source": "corabiz",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "Deep-Training-For-TOEIC",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://deep-training-for-toeic.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/Deep-Training-For-TOEIC",
+    "private": false,
+    "source": "Deep-Training-For-TOEIC",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "DevBridge",
+    "tagline": "Studio de pilotage des agents et jobs",
+    "stack": [
+      "Next.js",
+      "Agents",
+      "API"
+    ],
+    "url": "https://koryxa-devbridge-frontend.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-devbridge-frontend",
+    "private": true,
+    "source": "koryxa-devbridge-frontend",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "Digital-Renforcy",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://digital-renforcy.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/Digital-Renforcy",
+    "private": false,
+    "source": "Digital-Renforcy",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "EnergiSight",
+    "tagline": "Intelligence et analyse énergétique",
+    "stack": [
+      "Data",
+      "Énergie"
+    ],
+    "url": "https://energi-sight.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/EnergiSight.",
+    "private": false,
+    "source": "EnergiSight.",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "jek-solutions",
+    "tagline": "Site vitrine premium bilingue de JEK Solutions",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://jek-solutions.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/jek-solutions",
+    "private": true,
+    "source": "jek-solutions",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://innovaplus-pxts.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/KORYXA",
+    "private": false,
+    "source": "KORYXA",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Admin",
+    "tagline": "Console de gestion privée",
+    "stack": [
+      "Admin",
+      "Next.js"
+    ],
+    "url": "https://koryxa-admin-web.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-admin",
+    "private": true,
+    "source": "koryxa-admin",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA API",
+    "tagline": "Portail et passerelle API",
+    "stack": [
+      "API",
+      "Web"
+    ],
+    "url": "https://koryxa-api.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-api",
+    "private": true,
+    "source": "koryxa-api",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Cora",
+    "tagline": "Assistant IA et orchestration",
+    "stack": [
+      "IA",
+      "Agents"
+    ],
+    "url": "https://koryxa-cora.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-cora",
+    "private": true,
+    "source": "koryxa-cora",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Formation",
+    "tagline": "Plateforme de formation KORYXA",
+    "stack": [
+      "Formation",
+      "Web"
+    ],
+    "url": "https://koryxa-formation-jlr7.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa_formation",
+    "private": false,
+    "source": "koryxa_formation",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Partner Portal",
+    "tagline": "Portail partenaire",
+    "stack": [
+      "Web",
+      "Formation"
+    ],
+    "url": "https://koryxa-formation-chatbot.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-partner-portal",
+    "private": true,
+    "source": "koryxa-partner-portal",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Payment",
+    "tagline": "Interface de paiement marchand",
+    "stack": [
+      "Next.js",
+      "Paiement"
+    ],
+    "url": "https://koryxa-payment-web.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-payment-web",
+    "private": true,
+    "source": "koryxa-payment-web",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "KORYXA Services IA",
+    "tagline": "Catalogue de services IA",
+    "stack": [
+      "IA",
+      "Web"
+    ],
+    "url": "https://koryxa-services-ia.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/koryxa-services-ia",
+    "private": false,
+    "source": "koryxa-services-ia",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "Mataki",
+    "tagline": "Assistant WhatsApp et recherche IA",
+    "stack": [
+      "FastAPI",
+      "Next.js",
+      "RAG"
+    ],
+    "url": "https://mataki.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/mataki",
+    "private": true,
+    "source": "mataki",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "MERQALOR CREDIT",
+    "tagline": "Moteur de risque et scoring crédit",
+    "stack": [
+      "FastAPI",
+      "RAROC",
+      "Scoring"
+    ],
+    "url": "https://credit.koryxa.fr/cockpit",
+    "repo": "https://github.com/Juniorleriche27/Merqalor-credit",
+    "private": true,
+    "source": "Merqalor-credit",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "MERQALOR Platform",
+    "tagline": "Interface de l’écosystème MERQALOR",
+    "stack": [
+      "Next.js",
+      "Finance"
+    ],
+    "url": "https://merqalor-frontend.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/merqalor-frontend",
+    "private": true,
+    "source": "merqalor-frontend",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "NeuroKap",
+    "tagline": "Plateforme d’entraînement cognitif",
+    "stack": [
+      "Next.js",
+      "IA"
+    ],
+    "url": "https://neurokap.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/neurokap",
+    "private": true,
+    "source": "neurokap",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "PieAgency",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://pie-agency.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/PieAgency",
+    "private": false,
+    "source": "PieAgency",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "promptcash",
+    "tagline": "PROMPT & CASH — plateforme web privée et évolutive par KORYXA",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://promptcash.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/promptcash",
+    "private": true,
+    "source": "promptcash",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "transnational-marine-prototype",
+    "tagline": "Prototype commercial privé pour TRANSNATIONAL MARINE (TRANSMARINE) SARL — concept KORYXA.",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://transnational-marine-prototype.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/transnational-marine-prototype",
+    "private": true,
+    "source": "transnational-marine-prototype",
+    "status": "Live",
+    "http": 200
+  },
+  {
+    "name": "CAURI / Voice-to-Ledger",
+    "tagline": "De la voix à la transaction comptable",
+    "stack": [
+      "FastAPI",
+      "Whisper",
+      "STT"
+    ],
+    "url": "https://cauri.koryxa.fr",
+    "repo": "https://github.com/Juniorleriche27/koryxa-voicebox-stt",
+    "private": true,
+    "source": "koryxa-voicebox-stt",
+    "status": "Private",
+    "http": 403
+  },
+  {
+    "name": "ChatLaya",
+    "tagline": "Assistant conversationnel KORYXA",
+    "stack": [
+      "LLM",
+      "Chat"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/koryxa-chatlaya",
+    "private": false,
+    "source": "koryxa-chatlaya",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "FinPersoAI",
+    "tagline": "Assistant de finances personnelles",
+    "stack": [
+      "IA",
+      "Finance"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/finepersoAI",
+    "private": false,
+    "source": "finepersoAI",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "Formation LLM RAG",
+    "tagline": "Formation pratique aux systèmes RAG",
+    "stack": [
+      "LLM",
+      "RAG",
+      "Qdrant"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/formation-llm-rag-vscode",
+    "private": true,
+    "source": "formation-llm-rag-vscode",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "InnovaFinance",
+    "tagline": "Application de finance numérique",
+    "stack": [
+      "Finance",
+      "Web"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/InnovaFinance",
+    "private": false,
+    "source": "InnovaFinance",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "mon_busness_1",
+    "tagline": "Projet de l’écosystème",
+    "stack": [
+      "Web"
+    ],
+    "url": "https://mon-busness-1.vercel.app",
+    "repo": "https://github.com/Juniorleriche27/mon_busness_1",
+    "private": false,
+    "source": "mon_busness_1",
+    "status": "Demo",
+    "http": 404
+  },
+  {
+    "name": "MyPlanning",
+    "tagline": "Planification et gestion des disponibilités",
+    "stack": [
+      "Planning",
+      "API"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/myplanning",
+    "private": true,
+    "source": "myplanning",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "Terminal Bridge",
+    "tagline": "Exécution contrôlée, GitHub et terminal",
+    "stack": [
+      "Python",
+      "GitHub",
+      "API"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/koryxa-terminal-bridge",
+    "private": true,
+    "source": "koryxa-terminal-bridge",
+    "status": "Demo",
+    "http": null
+  },
+  {
+    "name": "Virtual Director",
+    "tagline": "Direction opérationnelle assistée par IA",
+    "stack": [
+      "IA",
+      "Agents"
+    ],
+    "url": null,
+    "repo": "https://github.com/Juniorleriche27/koryxa-virtual-director",
+    "private": true,
+    "source": "koryxa-virtual-director",
+    "status": "Demo",
+    "http": null
+  }
+]

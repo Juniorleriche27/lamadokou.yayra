@@ -1,6 +1,7 @@
 import { Column, Heading, Meta, Schema, Text, Button, Row, RevealFx } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { LiveEcosystem } from "@/components/work/LiveEcosystem";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -55,6 +56,7 @@ export default function Work() {
           </Row>
         </Column>
       </RevealFx>
+      <LiveEcosystem />
       <Projects />
     </Column>
   );
