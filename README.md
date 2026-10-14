@@ -1,18 +1,21 @@
-## Portfolio de données – Lamadokou Yayra
+# Yayra Junior Lamadokou - AI Engineer | FastAPI + Next.js + RAG/LLM
 
-Ce dépôt contient le code de mon site personnel de portfolio (Next.js + design system personnalisé), utilisé pour présenter mon profil, mes expériences et mes projets data.
+**3,182 contributions / an. Je ship des produits IA qui vont en prod.**
 
-### Démarrage rapide
+### LIVE DEMOS (Code privé, produit public)
+- **MERQALOR CREDIT 1.2 - Moteur Risque Bâle III** 
+  Stack: FastAPI + Moteur actuariel RAROC + Rating
+  Live: https://credit.koryxa.fr/cockpit - 12.8M€ audités, scoring 95/100
+  [Private Repo - Demo sur demande]
 
-- `npm install`
-- `npm run dev`
+- **Voice-to-Ledger - Speech to Transaction**
+  Stack: koryxa-voicebox-stt + FastAPI + Whisper
+  Live: https://cauri.koryxa.fr - Vocal WhatsApp en XOF -> écriture comptable
 
-Les principaux fichiers à modifier :
-- `src/resources/content.tsx` : contenu du site (profil, pages, textes)
-- `src/resources/once-ui.config.ts` : configuration générale (routes, style, SEO)
-- `src/app/work/projects` : projets au format `.mdx`
+- **RAG / LLM Formation Engine**
+  Stack: Next.js + RAG + Vector DB
+  Repo: formation-llm-rag-vscode (public)
 
-### Licence d’origine du template
-
-Le site est basé sur le template open-source **Magic Portfolio** (licence CC BY-NC 4.0).  
-Voir `LICENSE` pour les détails de la licence d’origine.
+**Je cherche: Mission REMOTE AI Engineer / RAG Engineer**
+**Stack: FastAPI, Next.js, Python, RAG, STT, LLM**
+**Contact: ylamadokou@gmail.com - Lome Togo (GMT) - Remote only**
